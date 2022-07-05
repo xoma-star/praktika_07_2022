@@ -55,7 +55,7 @@ class MainWindow(QMainWindow):
             return self.save_file(filename)
 
     def save_file(self, filename):
-        return self.mj_sets_widget.q_image.save(f"{filename}.jpg")
+        return self.mj_sets_widget.q_image.save(f"{filename}.png", "PNG", -1)
 
     def about(self):
         QMessageBox.about(self, "О приложении", self.about_text)

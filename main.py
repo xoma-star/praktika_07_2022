@@ -94,7 +94,7 @@ class MainWindow(QMainWindow):
 
         self.c_line_edit = QLineEdit()
         self.c_line_edit.setText(str(self.mj_sets_widget.c).strip('()'))
-        self.c_line_edit.setReadOnly(True)
+        self.c_line_edit.setReadOnly(False)
 
         self.image_size_combo_box = QComboBox()
         self.image_size_combo_box.addItem("800x800", (800, 800))
@@ -117,10 +117,10 @@ class MainWindow(QMainWindow):
         self.y_min_spin_box.setSingleStep(0.01)
         self.y_max_spin_box.setSingleStep(0.01)
 
-        self.x_min_spin_box.setRange(-100, 100)
-        self.x_max_spin_box.setRange(-100, 100)
-        self.y_min_spin_box.setRange(-100, 100)
-        self.y_max_spin_box.setRange(-100, 100)
+        self.x_min_spin_box.setRange(-5, 5)
+        self.x_max_spin_box.setRange(-5, 5)
+        self.y_min_spin_box.setRange(-5, 5)
+        self.y_max_spin_box.setRange(-5, 5)
 
         self.x_min_spin_box.setValue(self.mj_sets_widget.x_min)
         self.x_max_spin_box.setValue(self.mj_sets_widget.x_max)
